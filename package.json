@@ -1,0 +1,14 @@
+{
+  "name": "lab1shifri",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/caesar.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/main.js",
+    "example": "node src/example.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
