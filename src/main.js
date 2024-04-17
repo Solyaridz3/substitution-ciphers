@@ -1,4 +1,4 @@
-import {getAnswer, getDataFromFIle, writeDataToFile, mutuallySimple} from "./utils/utils.js";
+import {getAnswer, getDataFromFIle, writeDataToFile, getMutuallySimpleKey} from "./utils/utils.js";
 import {caesarCipher, caesarDeciphering} from "./caesar.js";
 import {linearEncrypt, linearDecrypt} from "./linear.js";
 import {encryptAffine, decryptAffine} from "./affine.js";
@@ -53,13 +53,6 @@ async function main() {
 
 main()
 
-async function getMutuallySimpleKey() {
-    let key = Number(await getAnswer("Введіть ключ шифрування, наприклад 5: "));
-    while (!mutuallySimple(key, 33)) {
-        console.log("Ключ повинен бути взаємно простим до довжини алфавіту (33)")
-        key = Number(await getAnswer("Введіть ключ шифрування, наприклад 5: "));
-    }
-    return key;
-}
+
 
 

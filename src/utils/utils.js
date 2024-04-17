@@ -40,3 +40,12 @@ export function modInverse(a, m) {
     }
     return 1;
 }
+
+export async function getMutuallySimpleKey() {
+    let key = Number(await getAnswer("Введіть ключ шифрування, наприклад 5: "));
+    while (!mutuallySimple(key, 33)) {
+        console.log("Ключ повинен бути взаємно простим до довжини алфавіту (33)")
+        key = Number(await getAnswer("Введіть ключ шифрування, наприклад 5: "));
+    }
+    return key;
+}
