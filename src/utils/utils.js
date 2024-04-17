@@ -29,3 +29,14 @@ export function mutuallySimple(a, b) {
     }
     return a === 1;
 }
+
+
+export function modInverse(a, m) {
+    a = (a % m + m) % m;
+    for (let x = 1; x < m; x++) {
+        if ((a * x) % m === 1) {
+            return x;
+        }
+    }
+    return 1;
+}

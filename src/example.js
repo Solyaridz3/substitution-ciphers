@@ -24,6 +24,6 @@ console.log("Розшифрований текст:", decryptedText);
 // Афінний
 const encrypted = encryptAffine(openMessage, 4, 2);
 const decrypted = decryptAffine(encrypted, 4, 2);
-console.log("Афінний цезаря");
+console.log("Афінний шифр");
 console.log(encrypted);
 console.log(decrypted);
